@@ -4,7 +4,7 @@
 
 #### Minecraft sprites to isometric cube render.
 
-With only few steps your can render you own __actual__ minecraft blocks icons.
+With only few steps you can render your own __actual__ minecraft blocks icons.
 
 ## Install
 ```
