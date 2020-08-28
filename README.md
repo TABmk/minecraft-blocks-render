@@ -1,4 +1,6 @@
-![Logo](img/logohead.png)
+<p align="center">
+  <img src="img/logohead.png" />
+</p>
 
 #### Minecraft sprites to isometric cube render.
 
