@@ -4,7 +4,7 @@
 
 #### Minecraft sprites to isometric cube render.
 
-With only few steps you can render you own __actual__ minecraft blocks icons.
+With only few steps your can render you own __actual__ minecraft blocks icons.
 
 ## Install
 ```
@@ -78,9 +78,9 @@ You can test base64 images here https://base64.guru/converter/decode/image
 
 ### TODO
 
-We have few ideas for improvement project. You can help by sending PR 🤗
+We have few ideas for project improvement. You can help by sending PR 🤗
 
-- [ ] create npm package
+- [x] create npm package
 - [ ] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
 - [ ] `renderTransparent` option for render command (allow render block with transparent textures)
 - [ ] `noShadow` option for render command
@@ -107,7 +107,7 @@ As we know, width of cube in isometric projection is 1/sqrt(3) by ISO 5456-3. Bu
 
 ![Shadow](img/shadowcorner.jpg)
 
-On side of a block we see 2 different shadows. By doing some math [@Kurikaeshiru](https://github.com/Kurikaeshiru) found regularity in RGB shifts. So we just shift each value of RGB with formula
+On sides of a block we see 2 different shadows. By doing some math [@Kurikaeshiru](https://github.com/Kurikaeshiru) found regularity in RGB shifts. So we just shift each value of RGB with formula
 
 `color /= 1.25 * multiplier`
 
