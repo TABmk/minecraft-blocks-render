@@ -101,11 +101,11 @@ Without looking in minecraft code we created almost same looking 3D preview of b
 
 As we know, width of cube in isometric projection is 1/sqrt(3) by ISO 5456-3. But as we can read [here](https://www.compuphase.com/axometr.htm), games often use 1/2 (0.5). Minecraft is no exception, so we used 1/2 width formula and +20% height of front sprites to make it similar with game;
 
-![Height](img/cubeheight.png)
+![Height](img/cubeheight.jpg)
 
 #### shadows
 
-![Shadow](img/shadowcorner.png)
+![Shadow](img/shadowcorner.jpg)
 
 On side of a block we see 2 different shadows. By doing some math [@Kurikaeshiru](https://github.com/Kurikaeshiru) found regularity in RGB shifts. So we just shift each value of RGB with formula
 
