@@ -16,7 +16,7 @@ yarn global add minecraft-blocks-render
 ```
 
 ## Usage
-To render blocks, you need get sprites. So we can just grab it from any `.jar` file, wich you can find on `/minecraft/versions/YOUR_VERSION/x.xx.x.jar` after installing it from launcher.
+To render blocks, you need to get sprites. So we can just grab it from any `.jar` file, that you can find on `/minecraft/versions/YOUR_VERSION/x.xx.x.jar` after installing it from launcher.
 
 https://help.minecraft.net/hc/en-us/articles/360035131551-Where-are-Minecraft-files-stored-
 
@@ -93,7 +93,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 
 ### Some researches
 
-Without looking in minecraft code we created almost same looking 3D preview of block, like inventory one.
+Without looking at the minecraft code, we created almost the same looking 3D preview of block as the inventory one.
 
 #### Width
 
@@ -107,8 +107,8 @@ As we know, width of cube in isometric projection is 1/sqrt(3) by ISO 5456-3. Bu
 
 ![Shadow](img/shadowcorner.jpg)
 
-On sides of a block we see 2 different shadows. By doing some math [@Kurikaeshiru](https://github.com/Kurikaeshiru) found regularity in RGB shifts. So we just shift each value of RGB with formula
+We see 2 different shadows on the sides of the block.. By doing some math [@Kurikaeshiru](https://github.com/Kurikaeshiru) found regularity in RGB shifts. So we just shift each value of RGB with formula
 
 `color /= 1.25 * multiplier`
 
-Multiplier used for second shadow, which darker
+Multiplier is used for the second shadow, which is darker
