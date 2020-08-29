@@ -1,3 +1,9 @@
+![](https://img.shields.io/npm/v/minecraft-blocks-render) ![](https://img.shields.io/npm/l/minecraft-blocks-render) ![](https://img.shields.io/npm/dm/minecraft-blocks-render)
+
+__Help__ ![](https://img.shields.io/github/issues/tabmk/minecraft-blocks-render) ![](https://img.shields.io/github/issues-pr/tabmk/minecraft-blocks-render)
+
+__Rate__ ![](https://img.shields.io/github/stars/tabmk/minecraft-blocks-render?style=social)
+
 <p align="center">
   <img src="img/logohead.png" />
 </p>
@@ -89,6 +95,8 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [ ] cleaning up `items` from extra icons like `clock_09` or `bow_pulling_1`
 - [ ] add more info to json like in-game item ID and old style ID
 - [ ] add tests
+- [ ] rewrite code to classes (?)
+- [ ] API (?)
 
 
 ### Some researches
