@@ -1,8 +1,8 @@
-![](https://img.shields.io/npm/v/minecraft-blocks-render) ![](https://img.shields.io/npm/l/minecraft-blocks-render) ![](https://img.shields.io/npm/dm/minecraft-blocks-render)
+[<img src="https://img.shields.io/npm/v/minecraft-blocks-render">](https://www.npmjs.com/package/minecraft-blocks-render) [<img src="https://img.shields.io/npm/l/minecraft-blocks-render">](https://github.com/TABmk/minecraft-blocks-render/blob/master/LICENSE) [<img src="https://img.shields.io/npm/dm/minecraft-blocks-render">](https://www.npmjs.com/package/minecraft-blocks-render)
 
-__Help__ ![](https://img.shields.io/github/issues/tabmk/minecraft-blocks-render) ![](https://img.shields.io/github/issues-pr/tabmk/minecraft-blocks-render)
+__Help__ [<img src="https://img.shields.io/github/issues/tabmk/minecraft-blocks-render">](https://github.com/TABmk/minecraft-blocks-render/issues?q=is%3Aopen+is%3Aissue) [<img src="https://img.shields.io/github/issues-pr/tabmk/minecraft-blocks-render">](https://github.com/TABmk/minecraft-blocks-render/pulls?q=is%3Aopen+is%3Apr)
 
-__Rate__ ![](https://img.shields.io/github/stars/tabmk/minecraft-blocks-render?style=social)
+__Rate__ [<img src="https://img.shields.io/github/stars/tabmk/minecraft-blocks-render?style=social">](https://github.com/TABmk/minecraft-blocks-render)
 
 <p align="center">
   <img src="img/logohead.png" />
@@ -97,7 +97,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [ ] add tests
 - [ ] rewrite code to classes (?)
 - [ ] API (?)
-
+- [ ] some blocks (like glass pane) using 2D sprite for preview. Need list of items which must be saved as sprite
 
 ### Some researches
 
