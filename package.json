@@ -8,10 +8,14 @@
     "mbr": "./bin/index.js"
   },
   "name": "minecraft-blocks-render",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Renders 3D-like icon from 2D sprite",
-  "main": "index.js",
+  "main": "bin/index.js",
   "repository": "https://github.com/TABmk/minecraft-blocks-render.git",
   "author": "TAB_mk",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+   "minecraft"
+ ],
+ "author": "TAB_mk <tabmk.contact@gmail.com>",
 }
