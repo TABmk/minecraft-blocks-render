@@ -9,7 +9,7 @@
     "mbr": "./bin/index.js"
   },
   "name": "minecraft-blocks-render",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Renders 3D-like icon from 2D sprite",
   "main": "bin/index.js",
   "repository": "https://github.com/TABmk/minecraft-blocks-render.git",

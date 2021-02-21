@@ -12,6 +12,9 @@ __Rate__ [<img src="https://img.shields.io/github/stars/tabmk/minecraft-blocks-r
 
 With only few steps you can render your own __actual__ minecraft blocks icons.
 
+#### ⚠️ WIP ⚠️
+Some features to yet implemented, but you can help by contributing!
+
 ## Install
 ```
 npm i -g minecraft-blocks-render
@@ -64,6 +67,7 @@ mbr grab
 |`-s`, `--scale`|scale image without reducing quality. `Warning!` May cause edges bugs|❌|`1`|Number|
 |`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|✅||String|
 |`--rs`, `--renderSides`|Add if want render blocks with side textures|❌||-|
+|`--rt`, `--renderTransparent`|Add if want render blocks with transparent textures|❌||-|
 |`-d`, `--debug`|Shows debug info of extraction|❌||-|
 
 ##### Example: `mbr render -t base -r 32 -s 10 -d`
@@ -90,7 +94,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 
 - [x] create npm package
 - [x] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
-- [ ] `renderTransparent` option for render command (allow render block with transparent textures)
+- [x] `renderTransparent` option for render command (allow render block with transparent textures)
 - [ ] `noShadow` option for render command
 - [ ] `name` option for render command (allow render only one block by name)
 - [ ] `items` to base64 converter

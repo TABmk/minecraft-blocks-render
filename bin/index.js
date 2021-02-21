@@ -26,7 +26,6 @@ const options = yargs
       .nargs('rs', 0)
       .describe('rs', 'add if want render blocks with side textures')
       .alias('rt', 'renderTransparent')
-      .default('rt', false)
       .nargs('rt', 0)
       .describe('rt', 'add if want render blocks with transparent textures')
       .alias('r', 'reducer')
