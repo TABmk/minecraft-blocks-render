@@ -23,7 +23,6 @@ const options = yargs
     yargs
       .example('$0 render -t base -r 32 -s 10')
       .alias('rs', 'renderSides')
-      .default('rs', false)
       .nargs('rs', 0)
       .describe('rs', 'add if want render blocks with side textures')
       .alias('rt', 'renderTransparent')

@@ -38,10 +38,10 @@ https://help.minecraft.net/hc/en-us/articles/360035131551-Where-are-Minecraft-fi
 
 |option|description|required|
 |---|---|---|
-|`-f`, `--file`|Load a file|true|
-|`-d`, `--debug`|Shows debug info of extraction|false|
+|`-f`, `--file`|Load a file|✅|
+|`-d`, `--debug`|Shows debug info of extraction|❌|
 
-##### Example: `bin grab -f 1.16.2.jar -d`
+##### Example: `mbr grab -f 1.16.2.jar -d`
 
 Make any folder and put `.jar` file on it.
 
@@ -58,12 +58,13 @@ mbr grab
 
 #### options
 
-|option|description|required|default|
-|---|---|---|---|
-|`-r`, `--reducer`|Image bit depth reducer. Bigger number will do more color reduce.|false|`1`|
-|`-s`, `--scale`|scale image without reducing quality. `Warning!` May cause edges bugs|false|`1`|
-|`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|true||
-|`-d`, `--debug`|Shows debug info of extraction|false||
+|option|description|required|default|type|
+|---|---|---|---|---|
+|`-r`, `--reducer`|Image bit depth reducer. Bigger number will do more color reduce.|❌|`1`|Number|
+|`-s`, `--scale`|scale image without reducing quality. `Warning!` May cause edges bugs|❌|`1`|Number|
+|`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|✅||String|
+|`--rs`, `--renderSides`|Add if want render blocks with side textures|❌||-|
+|`-d`, `--debug`|Shows debug info of extraction|❌||-|
 
 ##### Example: `mbr render -t base -r 32 -s 10 -d`
 
@@ -88,7 +89,7 @@ You can test base64 images here https://base64.guru/converter/decode/image
 We have few ideas for project improvement. You can help by sending PR 🤗
 
 - [x] create npm package
-- [ ] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
+- [x] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
 - [ ] `renderTransparent` option for render command (allow render block with transparent textures)
 - [ ] `noShadow` option for render command
 - [ ] `name` option for render command (allow render only one block by name)
@@ -99,6 +100,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [ ] rewrite code to classes (?)
 - [ ] API (?)
 - [ ] some blocks (like glass pane) using 2D sprite for preview. Need list of items which must be saved as sprite
+- [ ] render blocks with transparent parts
 
 ### Some researches
 

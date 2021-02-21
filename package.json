@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "canvas": "^2.6.1",
+    "glob": "^7.1.6",
     "unzipper": "^0.10.11",
     "yargs": "^15.4.1"
   },
@@ -12,10 +13,9 @@
   "description": "Renders 3D-like icon from 2D sprite",
   "main": "bin/index.js",
   "repository": "https://github.com/TABmk/minecraft-blocks-render.git",
-  "author": "TAB_mk",
+  "author": "TAB_mk <tabmk.contact@gmail.com>",
   "license": "MIT",
   "keywords": [
-   "minecraft"
- ],
- "author": "TAB_mk <tabmk.contact@gmail.com>"
+    "minecraft"
+  ]
 }
