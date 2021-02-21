@@ -68,6 +68,7 @@ mbr grab
 |`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|✅||String|
 |`--rs`, `--renderSides`|Add if want render blocks with side textures|❌||-|
 |`--rt`, `--renderTransparent`|Add if want render blocks with transparent textures|❌||-|
+|`--ns`, `--noShadow`|disable shadows on sides|❌||-|
 |`-d`, `--debug`|Shows debug info of extraction|❌||-|
 
 ##### Example: `mbr render -t base -r 32 -s 10 -d`
@@ -95,7 +96,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [x] create npm package
 - [x] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
 - [x] `renderTransparent` option for render command (allow render block with transparent textures)
-- [ ] `noShadow` option for render command
+- [x] `noShadow` option for render command
 - [ ] `name` option for render command (allow render only one block by name)
 - [ ] `items` to base64 converter
 - [ ] cleaning up `items` from extra icons like `clock_09` or `bow_pulling_1`
