@@ -77,7 +77,7 @@ After grabbing sprites you can render your blocks with command `mbr render`
 
 If you use type `png` all output images will be saved to `grab/rendered`
 
-Type `base` will save your renders to JSON file `grab/rendered.json`. Where key — bukkit name, value — base64 string.
+Type `base` will save your renders to JSON file `grab/rendered.json`. Where key — bukkit name, value — base64 string. Items (fron `grab/items`) are will be also converted to base64.
 
 ##### rendered.json example
 ```
@@ -98,7 +98,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [x] `renderTransparent` option for render command (allow render block with transparent textures)
 - [x] `noShadow` option for render command
 - [ ] `name` option for render command (allow render only one block by name)
-- [ ] `items` to base64 converter
+- [x] `items` to base64 converter
 - [ ] cleaning up `items` from extra icons like `clock_09` or `bow_pulling_1`
 - [ ] add more info to json like in-game item ID and old style ID
 - [ ] add tests
