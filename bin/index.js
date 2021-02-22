@@ -31,6 +31,8 @@ const options = yargs
       .alias('ns', 'noShadow')
       .nargs('ns', 0)
       .describe('ns', 'disable shadows on sides')
+      .alias('name', 'render single block/item')
+      .nargs('name', 1)
       .alias('r', 'reducer')
       .default('r', 1)
       .nargs('r', 1)

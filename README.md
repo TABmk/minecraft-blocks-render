@@ -66,12 +66,14 @@ mbr grab
 |`-r`, `--reducer`|Image bit depth reducer. Bigger number will do more color reduce.|❌|`1`|Number|
 |`-s`, `--scale`|scale image without reducing quality. `Warning!` May cause edges bugs|❌|`1`|Number|
 |`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|✅||String|
+|`--name`|render specified item. Items and all options support|❌||String|
 |`--rs`, `--renderSides`|Add if want render blocks with side textures|❌||-|
 |`--rt`, `--renderTransparent`|Add if want render blocks with transparent textures|❌||-|
 |`--ns`, `--noShadow`|disable shadows on sides|❌||-|
 |`-d`, `--debug`|Shows debug info of extraction|❌||-|
 
 ##### Example: `mbr render -t base -r 32 -s 10 -d`
+##### Example 2: `mbr render -t base --name acacia_boat -s 2`
 
 After grabbing sprites you can render your blocks with command `mbr render`
 
