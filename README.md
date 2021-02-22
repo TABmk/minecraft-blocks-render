@@ -99,7 +99,7 @@ We have few ideas for project improvement. You can help by sending PR 🤗
 - [x] `renderSides` option for render command (allow render even `*_top`/`*_bottom`/etc blocks)
 - [x] `renderTransparent` option for render command (allow render block with transparent textures)
 - [x] `noShadow` option for render command
-- [ ] `name` option for render command (allow render only one block by name)
+- [x] `name` option for render command (allow render only one block by name)
 - [x] `items` to base64 converter
 - [ ] cleaning up `items` from extra icons like `clock_09` or `bow_pulling_1`
 - [ ] add more info to json like in-game item ID and old style ID
