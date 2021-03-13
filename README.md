@@ -15,6 +15,9 @@ With only few steps you can render your own __actual__ minecraft blocks icons.
 #### ⚠️ WIP ⚠️
 Some features not yet implemented, but you can help by contributing!
 
+# [Important] __HOW TO USE__ 🍳🐕
+<img src="img/meme.jpg" />
+
 ## Install
 ```
 npm i -g minecraft-blocks-render
