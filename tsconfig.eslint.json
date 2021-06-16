@@ -1,0 +1,7 @@
+{
+  "include": [
+    "lib/*.ts",
+    "bin/*.ts",
+    ".eslintrc"
+  ]
+}
