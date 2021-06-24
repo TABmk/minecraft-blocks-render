@@ -6,22 +6,22 @@ import { grabVars, Folder } from '../vars';
 
 /**
  * Grab data from minecraft .jar file
- * @param  {string} file path
- * @param  {boolean} debug
+ * @param  {{ file, debug }} .jar path and debug boolean
  */
 export default async ({ file, debug }: {
   file: string,
   debug: boolean,
 }) => {
+  // init logger
+  const logger = new Logger(debug);
+
   // check is file exist and we can work with it
   try {
     accessSync(file, constants.F_OK | constants.W_OK | constants.R_OK);
   } catch (error) {
+    logger.log(error);
     throw new Error('Can\'t open file');
   }
-
-  // init logger
-  const logger = new Logger(debug);
 
   // parse .jar file
   createReadStream(file)

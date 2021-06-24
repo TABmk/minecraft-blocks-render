@@ -8,6 +8,16 @@ interface GrabVars {
   rawDataPath: string,
 }
 
+interface DefaultMinecraftPath {
+  darwin: string,
+  linux: string,
+  win32: string,
+  indexes: string,
+  objects: string,
+  language: RegExp,
+  languagePattern: string,
+}
+
 // eslint-disable-next-line
 export const grabVars: GrabVars = {
   folders: [{
@@ -28,4 +38,14 @@ export const grabVars: GrabVars = {
   },
   ],
   rawDataPath: './rawData/',
+};
+
+export const defaultMinecraftPath: DefaultMinecraftPath = {
+  darwin: '/Library/Application Support/minecraft',
+  linux: '/.minecraft',
+  win32: '%AppData%/.minecraft',
+  indexes: '/assets/indexes',
+  objects: '/assets/objects',
+  language: /minecraft\/lang\/(.*)\.json/i,
+  languagePattern: 'minecraft/lang/%LANG%.json',
 };

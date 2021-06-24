@@ -9,7 +9,6 @@
   "repository": "https://github.com/TABmk/minecraft-blocks-render.git",
   "author": "TAB_mk <tabmk.contact@gmail.com>",
   "license": "MIT",
-  "typings": "typing",
   "keywords": [
     "minecraft"
   ],
