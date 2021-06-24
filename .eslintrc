@@ -13,5 +13,6 @@
         "no-console": "off",
         "no-bitwise": "off",
         "no-prototype-builtins": "off",
+        "no-continue": "off"
     }
 }

@@ -22,6 +22,10 @@ const options = yargs
         demandOption: true,
         describe: 'Load a file',
       })
+      .option('extra', {
+        nargs: 0,
+        describe: 'Grab extra files from /data/',
+      })
       .option('debug', {
         alias: 'd',
         nargs: 0,

@@ -6,10 +6,11 @@ import { grabVars, Folder } from '../vars';
 
 /**
  * Grab data from minecraft .jar file
- * @param  {{ file, debug }} .jar path and debug boolean
+ * @param  {{ file, debug, extra}} .jar path, grab extra boolean, debug boolean
  */
-export default async ({ file, debug }: {
+export default async ({ file, extra, debug }: {
   file: string,
+  extra: boolean,
   debug: boolean,
 }) => {
   // init logger
@@ -35,6 +36,10 @@ export default async ({ file, debug }: {
         for (let i = 0; i < grabVars.folders.length; i += 1) {
           // current pattern
           const path: Folder = grabVars.folders[i];
+
+          if (!extra && path.isExtra) {
+            continue;
+          }
 
           // if file matches regexp
           const found = path.pattern.exec(entry.path);

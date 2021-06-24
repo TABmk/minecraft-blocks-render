@@ -1,6 +1,7 @@
 export interface Folder {
   pattern: RegExp,
   saveTo: string,
+  isExtra: boolean,
 }
 
 interface GrabVars {
@@ -23,20 +24,28 @@ export const grabVars: GrabVars = {
   folders: [{
     pattern: /assets\/minecraft\/textures\/block\/(.*)/i,
     saveTo: '/textures/block/',
+    isExtra: false,
   }, {
     pattern: /assets\/minecraft\/textures\/item\/(.*)/i,
     saveTo: '/textures/item/',
+    isExtra: false,
   }, {
     pattern: /assets\/minecraft\/blockstates\/(.*)/i,
     saveTo: '/blockstates/',
+    isExtra: false,
   }, {
     pattern: /assets\/minecraft\/models\/(.*)/i,
     saveTo: '/models/',
+    isExtra: false,
   }, {
     pattern: /^(version\.json)$/i,
     saveTo: '',
-  },
-  ],
+    isExtra: true,
+  }, {
+    pattern: /data\/minecraft\/(.*)/i,
+    saveTo: '/data/',
+    isExtra: true,
+  }],
   rawDataPath: './rawData/',
 };
 
