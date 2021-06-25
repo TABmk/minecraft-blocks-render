@@ -15,7 +15,6 @@
   "dependencies": {
     "canvas": "^2.8.0",
     "fstream": "^1.0.12",
-    "glob": "^7.1.7",
     "unzipper": "^0.10.11",
     "yargs": "^17.0.1"
   },

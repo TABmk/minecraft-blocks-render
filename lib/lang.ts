@@ -1,8 +1,5 @@
 import {
-  readdir,
-  constants,
-  accessSync,
-  readFileSync,
+  readdir, constants, accessSync, readFileSync,
 } from 'fs';
 import * as os from 'os';
 import { Reader, Writer } from 'fstream';
