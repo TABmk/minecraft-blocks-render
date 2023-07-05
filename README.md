@@ -15,9 +15,12 @@ With only few steps you can render your own __actual__ minecraft blocks icons.
 #### ⚠️ WIP ⚠️
 Some features not yet implemented, but you can help by contributing!
 
-### ⚠️ V2 is on way
+### ⚠️ V3 is on way
 
-With more features and TypeScript. [Check here ](https://github.com/TABmk/minecraft-blocks-render/tree/v2)
+Now with web UI. [Check out here](https://github.com/TABmk/minecraft-blocks-render/tree/v3)
+<p align="center">
+  <img width="50%" src="https://github.com/TABmk/minecraft-blocks-render/blob/9f21eabd0d5921f60fb2ac912fe0ced72b927854/preview.jpg" />
+</p>
 
 # [Important] __HOW TO USE__ 🍳🐕
 <img src="img/meme.jpg" />
