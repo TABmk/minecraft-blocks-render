@@ -6,10 +6,11 @@
 	export let handleData: handleDataType;
 
 	const handleFileChange = async (event: Event) => {
+		console.log(event.detail.acceptedFiles);
 		const et = event.target as HTMLInputElement;
 
-		if (et.files?.length) {
-			const file = et.files[0];
+		if (event?.detail?.acceptedFiles?.length) {
+			const file = event.detail.acceptedFiles[0];
 
 			handleData(file);
 		} else {
@@ -34,7 +35,6 @@
 </script>
 
 <Dropzone
-	accept
 	inputElement
 	on:drop={handleFileChange}
 	containerClasses="bg-slate-800 mt-14 lg:max-w-screen-lg mx-auto"

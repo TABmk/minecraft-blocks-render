@@ -11,12 +11,12 @@
 		}
 
 		const getMesh = (el) => {
-			console.log(el);
+			console.log('>>>', el);
 
-			if (!el?.model?.elements) {
+			if (!el?.model?.elements && el?.model?.parent) {
 				return getMesh(
 					Models.find(
-						(e) => e.name === el?.model?.parent.replace('minecraft:', '').replace('block/', '')
+						(e) => e.name === el?.model?.parent?.replace('minecraft:', '')?.replace('block/', '')
 					)
 				);
 			}

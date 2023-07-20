@@ -1871,10 +1871,10 @@ svelte-eslint-parser@^0.32.0:
     postcss "^8.4.23"
     postcss-scss "^4.0.6"
 
-svelte-file-dropzone@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/svelte-file-dropzone/-/svelte-file-dropzone-2.0.1.tgz#b637312cfa13728bc7b0f52a745a89a7818fd547"
-  integrity sha512-VDx5h+YSh4BZOk3O3R/rnLZqOlWTnUEBx74DmZBU3LS3bulMXqXCs8zl8rjuhcCWdNKh4Rhg89dJJ0f6rOPEWw==
+svelte-file-dropzone@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/svelte-file-dropzone/-/svelte-file-dropzone-2.0.2.tgz#cd1565eb701830f7396925f3dc393f497603dc0d"
+  integrity sha512-+0gSO21Jp3zDvpzq0AQTz/afInQGjkjv0CSr8+dXvLg+JjIQxQ9mJRa5+Taqx4/NTKExqB5zr8XoTfCdk30FTQ==
   dependencies:
     file-selector "^0.2.4"
 

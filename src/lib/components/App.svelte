@@ -45,6 +45,10 @@
 	});
 
 	const handleData: handleDataType = async (file) => {
+		verSelected = true;
+		materialsLoad = false;
+		Models = [];
+
 		const data = await JSZip.loadAsync(file);
 
 		const updMaterial = (regexp: RegExp, w: string, cb: Function) => {
