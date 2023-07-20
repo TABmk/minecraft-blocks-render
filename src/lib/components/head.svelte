@@ -3,7 +3,7 @@
 	import { OrbitControls } from '@threlte/extras';
 	import { ChevronDown, ChevronRight, Icon } from 'svelte-hero-icons';
 	import { NearestFilter, SRGBColorSpace, TextureLoader } from 'three';
-
+	import Spinner3d from './spinner3d.svelte';
 	const BRICKS_TEXTURE =
 		'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0UlEQVQ4y42SoQ4CMRBE95cw2BMESQKGD8CAwmDBYgjB4HA4JD/Bb5VMk2kme9texeSafb1NZ3btu1sl6LVdpNtxn36HTREZ+ft6GdUNAHqsh3zhvJznM+sR17qhcBpmWZ/nvZzxA6QcDchQhwzPhgDRAF/WlNW4eb94Vsuz8tzAe6Jf1DUTL3LT0OiLvjUTbUSeG/R4rt0Bt2jOmkuUieYy2oNoB2gv4qaeGZr3q5n4UG1qzlN7YvRYm3NrD8oYI8+9mRhn7KV70OLW49nfIYP+d4RKtAhLyaYAAAAASUVORK5CYII=';
 
@@ -27,20 +27,6 @@
 
 		<Icon src={innerWidth < 640 ? ChevronDown : ChevronRight} class=" mt-4 sm:ml-4" size="50" />
 
-		<Canvas size={{ width: 200, height: 200 }}>
-			<T.PerspectiveCamera makeDefault position={[1, 1.5, 1]}>
-				<OrbitControls enableZoom={false} />
-			</T.PerspectiveCamera>
-			<T.Mesh rotation.y={rotation}>
-				<T.BoxGeometry args={[1, 1, 1]} />
-				<T.MeshBasicMaterial
-					map={new TextureLoader().load(BRICKS_TEXTURE, (t) => {
-						t.magFilter = NearestFilter;
-						t.minFilter = NearestFilter;
-						t.colorSpace = SRGBColorSpace;
-					})}
-				/>
-			</T.Mesh>
-		</Canvas>
+		<Spinner3d texture={BRICKS_TEXTURE} />
 	</div>
 </div>

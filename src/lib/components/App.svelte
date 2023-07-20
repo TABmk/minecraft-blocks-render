@@ -10,12 +10,22 @@
 	import Items from './items.svelte';
 	import type { MaterialType, VersionType, handleDataType } from './types';
 
+	/*
+  Language: 
+    version json ->
+    assetIndex ->
+    https://piston-meta.mojang.com/v1/packages/... ->
+    https://resources.download.minecraft.net/3b/3b5615996abcd10488d247db7fd7fb1e16ff5de7
+  */
+
 	let versions: Array<VersionType> = [];
 	let snapshots = false;
 	let materialsLoad = false;
 	let verSelected = false;
 	let currVersion: VersionType;
 	let Materials: Array<MaterialType> = [];
+
+	let Models = [];
 
 	let currItem = {};
 
@@ -41,49 +51,52 @@
 			if (regexp.test(w)) {
 				const match = w.match(regexp);
 				if (match) {
-					const item = Materials.find((e) => e?.material_name === match[2].toUpperCase());
-					if (item) {
-						cb(item);
-					}
+					// const item = Materials.find((e) => e?.material_name === match[2].toUpperCase());
+					// if (item) {
+					cb(match[2]);
+					// }
 				}
 			}
 		};
 
 		Object.keys(data.files).forEach(async (w) => {
-			updMaterial(
-				/(assets\/minecraft\/)?models\/item\/(.+)\.json/,
-				w,
-				async (item: MaterialType) => {
-					item.model = JSON.parse(await data.files[w].async('text'));
-					Materials = [...Materials];
-				}
-			);
+			updMaterial(/(assets\/minecraft\/)?models\/block\/(.+)\.json/, w, async (item) => {
+				const text = JSON.parse(await data.files[w].async('text'));
 
-			updMaterial(
-				/(assets\/minecraft\/)?textures\/item\/(.+)\.png/,
-				w,
-				async (item: MaterialType) => {
-					item.icon = `data:image/png;base64, ${await data.files[w].async('base64')}`;
-					item.type = 'item';
+				Models = [
+					...Models,
+					{
+						model: text,
+						name: item
+					}
+				];
+			});
 
-					Materials = [...Materials];
-				}
-			);
+			// updMaterial(
+			// 	/(assets\/minecraft\/)?textures\/item\/(.+)\.png/,
+			// 	w,
+			// 	async (item: MaterialType) => {
+			// 		item.icon = `data:image/png;base64, ${await data.files[w].async('base64')}`;
+			// 		item.type = 'item';
 
-			updMaterial(
-				/(assets\/minecraft\/)?textures\/block\/(.+)\.png/,
-				w,
-				async (item: MaterialType) => {
-					item.texture = `data:image/png;base64, ${await data.files[w].async('base64')}`;
-					item.threeTexture = new TextureLoader().load(item.texture);
-					item.threeTexture.magFilter = NearestFilter;
-					item.threeTexture.minFilter = NearestFilter;
-					item.threeTexture.colorSpace = SRGBColorSpace;
-					item.type = 'block';
+			// 		Materials = [...Materials];
+			// 	}
+			// );
 
-					Materials = [...Materials];
-				}
-			);
+			// updMaterial(
+			// 	/(assets\/minecraft\/)?textures\/block\/(.+)\.png/,
+			// 	w,
+			// 	async (item: MaterialType) => {
+			// 		item.texture = `data:image/png;base64, ${await data.files[w].async('base64')}`;
+			// 		item.threeTexture = new TextureLoader().load(item.texture);
+			// 		item.threeTexture.magFilter = NearestFilter;
+			// 		item.threeTexture.minFilter = NearestFilter;
+			// 		item.threeTexture.colorSpace = SRGBColorSpace;
+			// 		item.type = 'block';
+
+			// 		Materials = [...Materials];
+			// 	}
+			// );
 		});
 	};
 
@@ -97,22 +110,22 @@
 		verSelected = true;
 		materialsLoad = true;
 
-		const matReq = await fetch(
-			`https://jd.papermc.io/paper/${currVersion.id}/org/bukkit/Material.html`
-		);
-		const mats = await matReq.text();
-		let htmlObject = document.createElement('div');
-		htmlObject.innerHTML = mats;
+		// const matReq = await fetch(
+		// 	`https://jd.papermc.io/paper/${currVersion.id}/org/bukkit/Material.html`
+		// );
+		// const mats = await matReq.text();
+		// let htmlObject = document.createElement('div');
+		// htmlObject.innerHTML = mats;
 
-		htmlObject.querySelectorAll('.constants-summary .member-name-link').forEach(
-			(e) =>
-				(Materials = [
-					...Materials,
-					{
-						material_name: e.innerHTML
-					}
-				])
-		);
+		// htmlObject.querySelectorAll('.constants-summary .member-name-link').forEach(
+		// 	(e) =>
+		// 		(Materials = [
+		// 			...Materials,
+		// 			{
+		// 				material_name: e.innerHTML
+		// 			}
+		// 		])
+		// );
 
 		const req = await fetch(currVersion.url);
 		const data = await req.json();
@@ -130,7 +143,7 @@
 	// 	currItem = item;
 	// };
 
-	let ctx;
+	// let ctx;
 
 	// setInterval(() => {
 	// 	console.log(ctx?.renderer?.domElement?.toDataURL());
@@ -178,7 +191,7 @@
 					<Icon src={ArrowPath} class="animate-spin" size="30" />
 				</p>
 			{:else}
-				<Items bind:Materials />
+				<Items bind:Models />
 			{/if}
 		{/if}
 	</div>

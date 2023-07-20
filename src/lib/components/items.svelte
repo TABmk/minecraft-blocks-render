@@ -1,21 +1,26 @@
 <script lang="ts">
-	import type { MaterialType } from './types';
+	import Model3d from './model3d.svelte';
 
-	export let Materials: Array<MaterialType>;
+	export let Models: Array;
 
 	let search: string;
 
 	$: handleSearch = () => {
 		if (search) {
-			return Materials.filter((e) => e.material_name.includes(search.toUpperCase()));
+			return Models.filter((e) => e.name.includes(search));
 		}
 
-		return Materials;
+		return Models;
+	};
+	let selected = '';
+
+	let setSelected = (el) => {
+		selected = el;
 	};
 </script>
 
 <div class="flex justify-center items-center pt-4">
-	<div class="h-96 w-full md:w-2/3 bg-slate-700 rounded-2xl">
+	<div class="h-96 w-full md:w-2/3 bg-slate-700 rounded-2xl flex">
 		<div class="h-96 w-1/4 bg-slate-600 rounded-l-lg">
 			<input
 				type="text"
@@ -28,11 +33,15 @@
 				{#each handleSearch() as mat}
 					<div
 						class="w-full h-10 outline-none p-2 text-center border-b-2 border-slate-500 cursor-pointer"
+						on:click={() => setSelected(mat)}
 					>
-						{mat.material_name}
+						{mat.name}
 					</div>
 				{/each}
 			</div>
+		</div>
+		<div class="h-96 w-3/4 bg-slate-700 rounded-r-lg">
+			<Model3d bind:Models bind:selected />
 		</div>
 	</div>
 </div>
