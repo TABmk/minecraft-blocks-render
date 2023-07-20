@@ -10,7 +10,10 @@ const config = {
 	kit: {
     adapter: adapter({
       fallback: 'index.html',
-  })
+    }),
+    paths: {
+      base: '/minecraft-blocks-render'
+    }
 	}
 };
 
