@@ -12,15 +12,12 @@ __Rate__ [<img src="https://img.shields.io/github/stars/tabmk/minecraft-blocks-r
 
 With only few steps you can render your own __actual__ minecraft blocks icons.
 
-#### ⚠️ WIP ⚠️
-Some features not yet implemented, but you can help by contributing!
+# ⚠️ DEPRECATED ⚠️
+I’m not sure if this still works, but I’ll keep this version here and on npm just in case.
 
-### ⚠️ V3 is on way
+**The new web-based version is available in the [master branch](https://github.com/TABmk/minecraft-blocks-render).**
 
-Now with web UI. [Check out here](https://github.com/TABmk/minecraft-blocks-render/tree/v3)
-<p align="center">
-  <img width="50%" src="https://github.com/TABmk/minecraft-blocks-render/blob/9f21eabd0d5921f60fb2ac912fe0ced72b927854/preview.jpg" />
-</p>
+# ⚠️ DEPRECATED ⚠️
 
 # [Important] __HOW TO USE__ 🍳🐕
 <img src="img/meme.jpg" />
@@ -39,20 +36,20 @@ To render blocks, you need to get sprites. So we can just grab it from any `.jar
 
 https://help.minecraft.net/hc/en-us/articles/360035131551-Where-are-Minecraft-files-stored-
 
-|OS|path|
-|---|---|
-|OSX|`~/Library/Application\ Support/minecraft/versions`|
-|Windows|`%AppData%/.minecraft/versions`|
-|Linux|`~/.minecraft/versions`|
+| OS      | path                                                |
+| ------- | --------------------------------------------------- |
+| OSX     | `~/Library/Application\ Support/minecraft/versions` |
+| Windows | `%AppData%/.minecraft/versions`                     |
+| Linux   | `~/.minecraft/versions`                             |
 
 ## mbr grab
 
 #### options
 
-|option|description|required|
-|---|---|---|
-|`-f`, `--file`|Load a file|✅|
-|`-d`, `--debug`|Shows debug info of extraction|❌|
+| option          | description                    | required |
+| --------------- | ------------------------------ | -------- |
+| `-f`, `--file`  | Load a file                    | ✅        |
+| `-d`, `--debug` | Shows debug info of extraction | ❌        |
 
 ##### Example: `mbr grab -f 1.16.2.jar -d`
 
@@ -71,16 +68,16 @@ mbr grab
 
 #### options
 
-|option|description|required|default|type|
-|---|---|---|---|---|
-|`-r`, `--reducer`|Image bit depth reducer. Bigger number will do more color reduce.|❌|`1`|Number|
-|`-s`, `--scale`|scale image without reducing quality. `Warning!` May cause edges bugs|❌|`1`|Number|
-|`-t`, `--type`|`base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block|✅||String|
-|`--name`|render specified item. Items and all options support|❌||String|
-|`--rs`, `--renderSides`|Add if want render blocks with side textures|❌||-|
-|`--rt`, `--renderTransparent`|Add if want render blocks with transparent textures|❌||-|
-|`--ns`, `--noShadow`|disable shadows on sides|❌||-|
-|`-d`, `--debug`|Shows debug info of extraction|❌||-|
+| option                        | description                                                                                                               | required | default | type   |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | ------ |
+| `-r`, `--reducer`             | Image bit depth reducer. Bigger number will do more color reduce.                                                         | ❌        | `1`     | Number |
+| `-s`, `--scale`               | scale image without reducing quality. `Warning!` May cause edges bugs                                                     | ❌        | `1`     | Number |
+| `-t`, `--type`                | `base` will generate JSON file where key - block name, value - base64 string. `png` will render png images for each block | ✅        |         | String |
+| `--name`                      | render specified item. Items and all options support                                                                      | ❌        |         | String |
+| `--rs`, `--renderSides`       | Add if want render blocks with side textures                                                                              | ❌        |         | -      |
+| `--rt`, `--renderTransparent` | Add if want render blocks with transparent textures                                                                       | ❌        |         | -      |
+| `--ns`, `--noShadow`          | disable shadows on sides                                                                                                  | ❌        |         | -      |
+| `-d`, `--debug`               | Shows debug info of extraction                                                                                            | ❌        |         | -      |
 
 ##### Example: `mbr render -t base -r 32 -s 10 -d`
 ##### Example 2: `mbr render -t base --name acacia_boat -s 2`
