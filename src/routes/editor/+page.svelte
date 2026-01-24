@@ -7,7 +7,7 @@
 
 	const handleBack = () => {
 		studioModel.clear();
-		goto('/');
+		goto('/minecraft-blocks-render');
 	};
 
 	const handleExport = () => {
@@ -23,9 +23,7 @@
 	<header class="bg-base-200/80 border-base-300 z-20 border-b backdrop-blur">
 		<div class="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-4">
 			<div class="flex items-center gap-3">
-				<button class="btn btn-sm btn-outline" type="button" on:click={handleBack}>
-					← Back
-				</button>
+				<button class="btn btn-sm btn-outline" type="button" on:click={handleBack}> ← Back </button>
 				<div class="text-base-content/70 text-xs font-semibold uppercase tracking-widest">
 					Studio
 				</div>
@@ -45,9 +43,9 @@
 		</div>
 	</header>
 
-	<main class="flex w-full flex-col gap-6 overflow-hidden px-6 py-4 min-h-0">
+	<main class="flex min-h-0 w-full flex-col gap-6 overflow-hidden px-6 py-4">
 		{#if $studioModel}
-			<section class="bg-base-200 border-base-300 w-full flex-1 border p-0 shadow-none min-h-0">
+			<section class="bg-base-200 border-base-300 min-h-0 w-full flex-1 border p-0 shadow-none">
 				<Model3D
 					model={$studioModel?.model}
 					modelName={$studioModel?.name ?? null}

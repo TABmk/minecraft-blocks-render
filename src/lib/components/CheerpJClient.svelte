@@ -334,8 +334,8 @@
 					.cheerpjInit({
 						version: 8,
 						enableX11: true,
-						javaProperties: ['java.library.path=/app/static_base_path/lwjgl/libraries/'],
-						libraries: { 'libGL.so.1': '/app/static_base_path/lwjgl/libraries/gl4es.wasm' },
+						javaProperties: ['java.library.path=/app/minecraft-blocks-render/lwjgl/libraries/'],
+						libraries: { 'libGL.so.1': '/app/minecraft-blocks-render/lwjgl/libraries/gl4es.wasm' },
 						preloadResources: PRELOAD_RESOURCES
 					})
 					.catch((err) => {
