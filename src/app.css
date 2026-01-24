@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui" {
+  themes: nord, sunset;
+}
+
+@import "$lib/css/fonts.css";
+@import "$lib/css/utils.css";
+
+@theme {
+  --font-minecraft: "Minecraft", sans-serif;
+
+  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet: 768px;
+
+  --height-screen-dynamic: calc(var(--vh, 1vh) * 100);
+  --min-height-screen-dynamic: calc(var(--vh, 1vh) * 100);
+
+  --color-custom-red: #E80020;
+
+  --animate-pulse-scale: pulse-scale 3s ease-in-out infinite;
+  @keyframes pulse-scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}

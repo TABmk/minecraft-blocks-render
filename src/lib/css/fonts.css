@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Minecraft";
+  src: url("$lib/assets/fonts/Minecraft-Bold.otf");
+  font-display: swap;
+}

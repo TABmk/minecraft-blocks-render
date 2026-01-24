@@ -1,0 +1,42 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@utility no-smoothing {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@utility trim {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.no-select {
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
